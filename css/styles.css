@@ -206,7 +206,7 @@ p {
   margin: 0 auto 30px;
 }
 .hero-button {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -413,7 +413,7 @@ p {
   padding-bottom: 94px;
 }
 .customers-title {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -667,6 +667,10 @@ p {
 .modal-close-svg {
   width: 11px;
   height: 11px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-btn:hover .modal-close-svg {
+  fill: var(--text-blue);
 }
 .modal-name-svg {
   width: 12px;
@@ -676,6 +680,7 @@ p {
   left: 15px;
   transform: translateY(-50%);
   outline: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .svg-input-container {
   position: relative;
@@ -718,6 +723,7 @@ p {
   border: 1px solid rgba(33, 33, 33, 0.2);
   padding-left: 42px;
   outline: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-area {
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -737,7 +743,22 @@ p {
 
   color: rgba(117, 117, 117, 0.5);
 }
-.agree {
+.agree-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+.agree-label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/checkbox.png");
+  background-repeat: no-repeat;
+  margin-right: 9px;
+}
+.agree-label {
   font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
@@ -745,7 +766,9 @@ p {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #757575;
-  margin-left: 8px;
+}
+.agree-checkbox:checked ~ .agree-label::before {
+  background-image: url("../images/choise.png");
 }
 .agree-span {
   color: var(--text-blue);
@@ -776,10 +799,8 @@ p {
 .modal-input:hover {
   border: 1px solid #2196f3;
 }
-.svg-input-container:hover .modal-name-svg {
-  fill: var(--text-blue);
-}
-.modal-name-svg:focus {
+.modal-input:focus ~ .modal-name-svg,
+.modal-input:hover ~ .modal-name-svg {
   fill: var(--text-blue);
 }
 .modal-area {
