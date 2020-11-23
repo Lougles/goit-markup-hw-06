@@ -469,13 +469,60 @@
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi nobis,
-          id omnis culpa vel ab voluptatem officiis, exercitationem mollitia
-          placeat ea earum qui modi in sit dolorem maiores unde rem.
-        </p>
-        <button data-modal-close>Close</button>
+      <div class="modal modal-container">
+        <h1 class="modal-title">Оставьте свои данные, мы вам перезвоним</h1>
+        <form class="modal-form">
+          <ul class="modal-form-list">
+            <li class="modal-form-item">
+              <label class="modal-form-label" for="name">Имя</label>
+              <div class="svg-input-container">
+                <input class="modal-input" type="text" name="name" id="name" />
+                <svg class="modal-name-svg">
+                  <use href="./images/icons/mi.svg#icon-name"></use>
+                </svg>
+              </div>
+            </li>
+            <li class="modal-form-item">
+              <label class="modal-form-label" for="tel">Телефон</label>
+              <div class="svg-input-container">
+                <input class="modal-input" type="tel" name="tel" id="tel" />
+                <svg class="modal-name-svg">
+                  <use href="./images/icons/mi.svg#icon-modal-phone"></use>
+                </svg>
+              </div>
+            </li>
+            <li class="modal-form-item">
+              <label class="modal-form-label" for="mail">Почта</label>
+              <div class="svg-input-container">
+                <input class="modal-input" type="email" name="mail" id="mail" />
+                <svg class="modal-name-svg">
+                  <use href="./images/icons/mi.svg#icon-modal-mail"></use>
+                </svg>
+              </div>
+            </li>
+            <li class="modal-form-item">
+              <label class="modal-form-label" for="comment">Комментарий</label>
+              <textarea
+                class="modal-area"
+                placeholder="Введите текст"
+                name="comment"
+                id="comment"
+                rows="8"
+              ></textarea>
+            </li>
+            <input type="checkbox" name="rules" id="rules" />
+            <label class="agree" for="rules"
+              >Соглашаюсь с рассылкой и принимаю
+              <a href="" class="agree-span">Условия договора</a></label
+            >
+          </ul>
+          <button class="modal-sbm-btn" type="submit">Отправить</button>
+        </form>
+        <button data-modal-close class="modal-close-btn">
+          <svg class="modal-close-svg">
+            <use href="./images/icons/mi.svg#icon-close-btn"></use>
+          </svg>
+        </button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
