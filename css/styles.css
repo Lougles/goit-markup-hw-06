@@ -566,6 +566,63 @@ p {
 .footer-linked-in {
   background-image: url("../images/icons/footer-4.svg");
 }
+.footer-mail-container {
+  padding-left: 93px;
+  padding-top: 12px;
+}
+.footer-email-input {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin-top: 20px;
+  width: 358px;
+  height: 50px;
+  padding: 16px 15px;
+  margin-right: 12px;
+  background: #2f303a;
+}
+.footer-input-btn {
+  display: flex;
+  align-items: center;
+}
+.footer-btn {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+  /* identical to box height, or 187% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  width: 200px;
+  color: var(--text-white);
+  background: var(--text-blue);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 62px 10px 29px;
+  margin-top: 20px;
+  background-image: url("../images/plane.png");
+  background-repeat: no-repeat;
+  background-position: center right 28px;
+}
 /*======================================Modal======================================*/
 .backdrop {
   position: fixed;
@@ -618,6 +675,7 @@ p {
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
+  outline: none;
 }
 .svg-input-container {
   position: relative;
@@ -659,6 +717,7 @@ p {
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   padding-left: 42px;
+  outline: none;
 }
 .modal-area {
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -713,15 +772,21 @@ p {
   margin: 0 auto;
   margin-top: 30px;
 }
-.svg-input-container:hover .modal-input,
-.svg-input-container:focus .modal-input {
+.modal-input:focus,
+.modal-input:hover {
   border: 1px solid #2196f3;
 }
 .svg-input-container:hover .modal-name-svg {
   fill: var(--text-blue);
 }
-.svg-input-container:focus .modal-name-svg {
+.modal-name-svg:focus {
   fill: var(--text-blue);
+}
+.modal-area {
+  outline: none;
+}
+.modal-area:focus {
+  border: 1px solid #2196f3;
 }
 /*======================================Портфолио======================================*/
 
