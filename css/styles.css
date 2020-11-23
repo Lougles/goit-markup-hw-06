@@ -219,6 +219,7 @@ p {
   display: block;
   margin: 0 auto;
   border: none;
+  cursor: pointer;
 }
 
 /*======================================Качества======================================*/
@@ -622,6 +623,7 @@ p {
   background-image: url("../images/plane.png");
   background-repeat: no-repeat;
   background-position: center right 28px;
+  cursor: pointer;
 }
 /*======================================Modal======================================*/
 .backdrop {
