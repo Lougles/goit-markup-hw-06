@@ -488,6 +488,7 @@ p {
 /*======================================Футер======================================*/
 .footer-container {
   display: flex;
+  justify-content: space-between;
 }
 .footer {
   background-color: var(--background-dark);
@@ -751,6 +752,9 @@ p {
   appearance: none;
   position: absolute;
 }
+.policy-container {
+  position: relative;
+}
 .agree-label::before {
   content: "";
   display: inline-block;
@@ -759,6 +763,9 @@ p {
   background-image: url("../images/checkbox.png");
   background-repeat: no-repeat;
   margin-right: 9px;
+  position: absolute;
+  top: 4px;
+  left: 0;
 }
 .agree-label {
   font-family: "Roboto";
@@ -768,6 +775,7 @@ p {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-left: 25px;
 }
 .agree-checkbox:checked ~ .agree-label::before {
   background-image: url("../images/choise.png");
